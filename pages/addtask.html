@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Add Task</h2>
+  <p>Provide the task details</p>
+  <form>
+    <div class="form-group">
+      <label for="usr">Task Details:</label>
+      <input type="text" class="form-control" ng-model="task.description">
+    </div>
+    <div class="checkbox">
+  		<label><input type="checkbox" value="" ng-model="task.isDone">Done</label>
+	</div>
+	<button type="button" class="btn btn-primary" ng-click="addTask()">Add</button>
+  </form>
+</div>

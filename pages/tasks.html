@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+      <div class="panel-heading">Task List</a></div>
+      <div class="panel-body">
+        <div class="list-group">
+          <a ng-repeat="task in taskList" ng-href="#" class="list-group-item">
+             <div class="row">
+                <div class="col-md-8">
+                  {{task.description}}
+                </div>
+                <div class="col-md-4">
+                  <div class="col-md-6">
+                    <label><input type="checkbox" ng-model="task.isDone">{{task.isDone == true ? '  Done' : '  Incomplete'}}</label>
+                  </div>
+                  <div class="col-md-6">
+                    <button type="button" class="btn btn-danger" ng-click="deleteTask(task)">Delete</button>
+                  </div>
+                </div>
+              </div>
+          </a>
+        </div>
+        <div ng-hide="taskList.length">No tasks</div>
+      </div>
+    </div>
+
